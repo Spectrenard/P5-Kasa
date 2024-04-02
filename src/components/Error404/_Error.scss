@@ -1,0 +1,21 @@
+.errorStyle {
+  align-items: center;
+  text-align: center;
+
+  h1 {
+    font-size: 20rem;
+    color: rgb(255, 99, 99);
+    padding: 70px;
+  }
+
+  p {
+    font-size: 1.5rem;
+    color: rgb(255, 99, 99);
+    padding-bottom: 30px;
+  }
+
+  a {
+    color: inherit;
+    border-bottom: 1px solid black;
+  }
+}

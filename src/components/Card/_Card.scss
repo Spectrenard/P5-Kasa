@@ -1,0 +1,54 @@
+.card-container {
+  background-color: rgba(173, 173, 173, 0.247);
+  border-radius: 20px;
+  max-width: 1210px;
+  margin: 10px auto;
+  padding: 40px;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 30px;
+}
+
+.card-logement {
+  transition: 0.2s;
+  position: relative;
+  border-radius: 10px;
+  overflow: hidden; /* Assurez-vous que le dégradé ne dépasse pas la carte */
+
+  img {
+    object-fit: cover;
+    width: 100%;
+    height: 100%;
+    border-radius: 10px;
+  }
+
+  .card-logement-text {
+    position: absolute;
+    color: white;
+    bottom: 15px;
+    left: 15px;
+    width: calc(
+      100% - 30px
+    ); /* Utilisez la largeur de la carte moins la marge */
+    z-index: 1;
+  }
+
+  .card-logement-title {
+    font-weight: bold;
+  }
+
+  /* Assombrir le bas de la card pour que le titre ressorte mieux */
+  &:after {
+    content: "";
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    height: 50%; /* Hauteur de la partie assombrie */
+    background: linear-gradient(to top, rgba(0, 0, 0, 0.7), transparent);
+  }
+
+  &:hover {
+    transform: scale(1.04);
+  }
+}
