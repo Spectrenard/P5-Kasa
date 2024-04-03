@@ -12,11 +12,9 @@ function Home() {
 
       <div className="card-container">
         {data.map((property) => (
-          <Card
-            key={property.id}
-            title={property.title}
-            cover={property.cover}
-          />
+          <Link key={property.id} to={`/logement/${property.id}`}>
+            <Card title={property.title} cover={property.cover} />
+          </Link>
         ))}
       </div>
     </div>

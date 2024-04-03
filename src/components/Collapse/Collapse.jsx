@@ -1,9 +1,8 @@
 import React, { useState, useRef, useEffect } from "react";
-import data from "../../data/collapse.json";
 import "./_Collapse.scss";
 import vectorIcon from "./Vector.png";
 
-function CollapseItem({ aboutTitle, aboutText }) {
+function CollapseItem({ title, text }) {
   const [open, setOpen] = useState(false);
   const contentRef = useRef(null);
 
@@ -24,7 +23,7 @@ function CollapseItem({ aboutTitle, aboutText }) {
   return (
     <div className="collapse-item">
       <div className="collapse-header" onClick={toggleCollapse}>
-        <h3>{aboutTitle}</h3>
+        <h3>{title}</h3>
         <img
           src={vectorIcon}
           alt="Vector"
@@ -39,24 +38,10 @@ function CollapseItem({ aboutTitle, aboutText }) {
         className={`collapse-content ${open ? "open" : ""}`}
         ref={contentRef}
       >
-        <p>{aboutText}</p>
+        <p>{text}</p>
       </div>
     </div>
   );
 }
 
-function About() {
-  return (
-    <div>
-      {data.map((item, index) => (
-        <CollapseItem
-          key={index}
-          aboutTitle={item.aboutTitle}
-          aboutText={item.aboutText}
-        />
-      ))}
-    </div>
-  );
-}
-
-export default About;
+export default CollapseItem;

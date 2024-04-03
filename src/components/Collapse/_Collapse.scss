@@ -1,31 +1,31 @@
-.collapse-item {
-  width: 53%;
-  max-width: 1240px;
-  margin: 35px auto;
+// .collapse-item {
+//   width: 53%;
+//   max-width: 1240px;
+//   margin: 35px auto;
 
-  .collapse-header {
-    align-items: center;
-    padding: 15px 10px;
-    border-radius: 5px;
-    display: flex;
-    justify-content: space-between;
-    background-color: rgb(250, 98, 98);
+//   .collapse-header {
+//     align-items: center;
+//     padding: 15px 10px;
+//     border-radius: 5px;
+//     display: flex;
+//     justify-content: space-between;
+//     background-color: rgb(250, 98, 98);
 
-    h3 {
-      color: white;
-    }
-    img {
-      width: 25px;
-      height: 15px;
-    }
-  }
+//     h3 {
+//       color: white;
+//     }
+//     img {
+//       width: 25px;
+//       height: 15px;
+//     }
+//   }
 
-  .collapse-content {
-    padding: 0 10px;
-    line-height: 25px;
-    border-radius: 5px;
-    background-color: rgba(238, 238, 238, 0.547);
-    overflow: hidden;
-    transition: max-height 0.2s ease;
-  }
-}
+//   .collapse-content {
+//     padding: 0 10px;
+//     line-height: 25px;
+//     border-radius: 5px;
+//     background-color: rgba(238, 238, 238, 0.547);
+//     overflow: hidden;
+//     transition: max-height 0.2s ease;
+//   }
+// }
