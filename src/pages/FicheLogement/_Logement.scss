@@ -9,59 +9,66 @@
     height: 415px;
     width: 100%;
   }
-
-  .first-case {
-    margin-top: 20px;
+  .all-infos {
     display: flex;
     justify-content: space-between;
 
-    h2 {
-      color: rgb(255, 100, 100);
-      font-size: 1.7rem;
-      font-weight: 500;
-    }
+    .first-case {
+      margin-top: 20px;
 
-    p {
-      padding-top: 5px;
-      font-weight: 600;
-    }
-
-    .host {
-      align-items: center;
-      display: flex;
-
-      img {
-        border-radius: 500px;
-        width: 70px;
+      h2 {
+        color: rgb(255, 100, 100);
+        font-size: 1.7rem;
+        font-weight: 500;
       }
 
       p {
-        color: rgb(255, 100, 100);
+        padding: 5px 0 20px;
+        font-weight: 600;
+      }
+
+      ul {
+        display: flex;
+      }
+
+      li {
+        font-size: 0.8rem;
+        color: white;
+        background-color: rgb(255, 100, 100);
+        padding: 5px 10px;
         margin-right: 10px;
+        border-radius: 10px;
       }
     }
-  }
 
-  // Deuxième ligne
-  .second-case {
-    display: flex;
-    justify-content: space-between;
-    margin: 10px 0 0px;
-    ul {
+    // Deuxième ligne
+    .second-case {
+      margin-top: 20px;
       display: flex;
-    }
+      flex-direction: column;
 
-    li {
-      font-size: 0.8rem;
-      color: white;
-      background-color: rgb(255, 100, 100);
-      padding: 5px 10px;
-      margin-right: 10px;
-      border-radius: 10px;
-    }
+      .host {
+        justify-content: flex-end;
+        align-items: center;
+        display: flex;
 
-    img {
-      margin: 0 5px;
+        p {
+          color: rgb(255, 100, 100);
+        }
+
+        img {
+          border-radius: 300px;
+          width: 50px;
+        }
+      }
+
+      .rate {
+        margin-top: 20px;
+      }
+
+      img {
+        margin: 0 5px;
+      }
     }
   }
 
@@ -99,6 +106,61 @@
       background-color: rgba(238, 238, 238, 0.547);
       overflow: hidden;
       transition: max-height 0.2s ease;
+    }
+  }
+}
+
+@media screen and (max-width: 600px) {
+  .logement {
+    .second-case {
+      display: block;
+
+      margin: 15px 0 0px;
+      ul {
+        display: flex;
+      }
+
+      li {
+        font-size: 0.8rem;
+        color: white;
+        background-color: rgb(255, 100, 100);
+        padding: 6px 15px;
+      }
+      .rate {
+        margin-top: 10px;
+        img {
+          margin: 0 5px;
+          width: 20px;
+        }
+      }
+    }
+    .collapse {
+      margin-top: 20px;
+      display: block;
+
+      .description {
+        margin-right: 0px;
+      }
+    }
+    .collapse-item {
+      width: 100%;
+      .collapse-header {
+        padding: 10px 10px;
+
+        h3 {
+          color: white;
+          font-weight: 500;
+        }
+      }
+
+      .collapse-content {
+        padding: 0 10px;
+        line-height: 25px;
+        border-radius: 5px;
+        background-color: rgba(238, 238, 238, 0.547);
+        overflow: hidden;
+        transition: max-height 0.2s ease;
+      }
     }
   }
 }
