@@ -12,12 +12,12 @@ function Header() {
       <nav>
         <ul>
           <li>
-            <NavLink exact to="/" activeClassName="active">
+            <NavLink exact="true" to="/" activeclassname="active">
               Accueil
             </NavLink>
           </li>
           <li>
-            <NavLink to="/About" activeClassName="active">
+            <NavLink to="/About" activeclassname="active">
               À propos
             </NavLink>
           </li>
