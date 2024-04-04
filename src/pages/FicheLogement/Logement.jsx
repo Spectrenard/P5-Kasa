@@ -1,5 +1,5 @@
 import React from "react";
-import { useParams } from "react-router-dom";
+import { useParams, Navigate } from "react-router-dom"; // Import de Navigate pour la redirection
 import data from "../../data/data.json";
 import "./_Logement.scss";
 import Description from "../../components/Description/Description";
@@ -14,7 +14,7 @@ function Logement() {
   const logement = data.find((log) => log.id === id);
 
   if (!logement) {
-    return <div>Logement non trouvé</div>;
+    return <Navigate to="</error>" />; // Redirection vers la page d'erreur
   }
 
   const {
@@ -48,14 +48,16 @@ function Logement() {
         {/* Deuxième ligne  */}
         <div className="second-case">
           <div className="host">
-            {" "}
-            <p>{host.name}</p>
-            <img src={host.picture} alt={host.name} className="host-image" />
-          </div>
+            <div className="headinfos">
+              {" "}
+              <p>{host.name}</p>
+              <img src={host.picture} alt={host.name} className="host-image" />
+            </div>
 
-          <div className="rate">
-            <Rate rating={parseInt(rating)} />{" "}
-            {/* Passer la note en tant que prop */}
+            <div className="rate">
+              <Rate rating={parseInt(rating)} />{" "}
+              {/* Passer la note en tant que prop */}
+            </div>
           </div>
         </div>
       </div>

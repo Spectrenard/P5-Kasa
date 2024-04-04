@@ -14,7 +14,7 @@
     justify-content: space-between;
 
     .first-case {
-      margin-top: 20px;
+      margin: 20px 0;
 
       h2 {
         color: rgb(255, 100, 100);
@@ -43,22 +43,21 @@
 
     // Deuxième ligne
     .second-case {
-      margin-top: 20px;
-      display: flex;
-      flex-direction: column;
-
+      margin: 20px 0 0;
+      display: block;
       .host {
-        justify-content: flex-end;
-        align-items: center;
-        display: flex;
-
         p {
           color: rgb(255, 100, 100);
         }
 
-        img {
+        .host-image {
           border-radius: 300px;
           width: 50px;
+        }
+
+        .headinfos {
+          display: flex;
+          align-items: center;
         }
       }
 
@@ -112,10 +111,10 @@
 
 @media screen and (max-width: 600px) {
   .logement {
-    .second-case {
+    .all-infos {
       display: block;
-
-      margin: 15px 0 0px;
+    }
+    .second-case {
       ul {
         display: flex;
       }
@@ -133,9 +132,13 @@
           width: 20px;
         }
       }
+      .host {
+        display: flex;
+        flex-direction: row-reverse;
+        justify-content: space-between;
+      }
     }
     .collapse {
-      margin-top: 20px;
       display: block;
 
       .description {

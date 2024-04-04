@@ -19,3 +19,21 @@
     border-bottom: 1px solid black;
   }
 }
+
+@media screen and (max-width: 550px) {
+  .errorStyle {
+    align-items: center;
+    text-align: center;
+
+    h1 {
+      font-size: 10rem;
+      color: rgb(255, 99, 99);
+      padding: 90px 0;
+    }
+
+    p {
+      font-size: 1.2rem;
+      padding: 30px;
+    }
+  }
+}

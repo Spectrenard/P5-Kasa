@@ -6,8 +6,8 @@ import CollapseItem from "../../components/Collapse/Collapse";
 import "./_About.scss";
 function About() {
   return (
-    <div>
-      <Banner imageSrc={image2} title="A propos" />
+    <div className="full-page">
+      <Banner imageSrc={image2} />
       {data.map((item, index) => (
         <CollapseItem
           key={index}

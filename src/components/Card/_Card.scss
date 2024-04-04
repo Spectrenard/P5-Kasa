@@ -55,3 +55,27 @@
     transform: scale(1.04);
   }
 }
+
+@media screen and (max-width: 550px) {
+  .card-container {
+    background-color: white;
+    max-width: 1210px;
+    margin: 5px auto;
+    padding: 0 25px;
+
+    .card-logement {
+      height: 240px; /* Hauteur fixe de 340px */
+
+      .card-logement-text {
+        position: absolute;
+        color: white;
+        bottom: 15px;
+        left: 15px;
+        width: calc(
+          100% - 110px
+        ); /* Utilisez la largeur de la carte moins la marge */
+        z-index: 1;
+      }
+    }
+  }
+}

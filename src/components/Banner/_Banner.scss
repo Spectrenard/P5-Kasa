@@ -14,7 +14,7 @@
     border-radius: 25px;
     position: relative;
     z-index: 1;
-    filter: brightness(50%);
+    filter: brightness(40%);
   }
 
   .bannerText {
@@ -24,5 +24,19 @@
     transform: translate(-50%, -50%);
     color: #ffffff;
     z-index: 3;
+  }
+}
+
+@media screen and (max-width: 550px) {
+  .banner {
+    .banner-image {
+      height: 150px;
+    }
+
+    .bannerText {
+      font-size: 0.7rem;
+      left: 40%;
+      text-align: left;
+    }
   }
 }
