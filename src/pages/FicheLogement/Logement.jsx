@@ -14,7 +14,7 @@ function Logement() {
   const logement = data.find((log) => log.id === id);
 
   if (!logement) {
-    return <Navigate to="</error>" />; // Redirection vers la page d'erreur
+    return <Navigate to="/error" />;
   }
 
   const {

@@ -38,7 +38,7 @@ function CollapseItem({ title, text }) {
         className={`collapse-content ${open ? "open" : ""}`}
         ref={contentRef}
       >
-        <p>{text}</p>
+        <ul>{text}</ul>
       </div>
     </div>
   );
