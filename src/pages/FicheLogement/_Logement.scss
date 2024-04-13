@@ -81,31 +81,31 @@
   }
   .collapse-item {
     width: 100%;
-    .collapse-header {
-      align-items: center;
-      padding: 15px 10px;
-      border-radius: 5px;
-      display: flex;
-      justify-content: space-between;
-      background-color: rgb(250, 98, 98);
+  }
 
-      h3 {
-        color: white;
-      }
-      img {
-        width: 25px;
-        height: 15px;
-      }
-    }
+  .collapse-header {
+    align-items: center;
+    padding: 15px 10px;
+    border-radius: 5px;
+    display: flex;
+    justify-content: space-between;
+    color: white;
+    background-color: rgb(250, 98, 98);
+    cursor: pointer;
+  }
 
-    .collapse-content {
-      padding: 0 10px;
-      line-height: 25px;
-      border-radius: 5px;
-      background-color: rgba(238, 238, 238, 0.547);
-      overflow: hidden;
-      transition: max-height 0.2s ease;
-    }
+  .collapse-content {
+    padding: 0px 20px;
+    line-height: 25px;
+    border-radius: 5px;
+    background-color: rgba(238, 238, 238, 0.547);
+    overflow: hidden;
+    transition: max-height 0.3s ease;
+    max-height: 0; /* Initial height when closed */
+  }
+
+  .collapse-item.open .collapse-content {
+    padding: 15px 20px; /* Adjust padding when open */
   }
 }
 

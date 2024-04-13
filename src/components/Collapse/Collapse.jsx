@@ -12,16 +12,16 @@ function CollapseItem({ title, text }) {
 
   useEffect(() => {
     if (open) {
-      // Définir la hauteur maximale sur la hauteur réelle du contenu lorsqu'il est ouvert
+      // Afficher le contenu avec une animation fluide
       contentRef.current.style.maxHeight = `${contentRef.current.scrollHeight}px`;
     } else {
-      // Réinitialiser la hauteur maximale lorsqu'il est fermé
+      // Cacher le contenu avec une animation fluide
       contentRef.current.style.maxHeight = "0";
     }
   }, [open]);
 
   return (
-    <div className="collapse-item">
+    <div className={`collapse-item ${open ? "open" : ""}`}>
       <div className="collapse-header" onClick={toggleCollapse}>
         <h3>{title}</h3>
         <img
@@ -34,10 +34,7 @@ function CollapseItem({ title, text }) {
           }}
         />
       </div>
-      <div
-        className={`collapse-content ${open ? "open" : ""}`}
-        ref={contentRef}
-      >
+      <div className="collapse-content" ref={contentRef}>
         <ul>{text}</ul>
       </div>
     </div>
