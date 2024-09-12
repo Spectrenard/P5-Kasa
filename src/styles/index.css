@@ -1,0 +1,531 @@
+@charset "UTF-8";
+* {
+  list-style: none;
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+  font-family: "Montserrat", sans-serif;
+  text-decoration: none;
+}
+
+#root {
+  background-color: white;
+}
+
+header {
+  background-color: white;
+  align-items: center;
+  display: flex;
+  justify-content: space-between;
+  max-width: 1270px;
+  margin: 0 auto;
+  padding: 20px 30px;
+}
+header .logo {
+  width: 180px;
+}
+header .logo img {
+  width: 100%;
+}
+header nav ul {
+  display: flex;
+}
+header nav li a {
+  font-size: 1.2rem;
+  color: rgb(246, 107, 107);
+  margin-left: 40px;
+}
+header nav li a.active {
+  background-color: rgba(255, 154, 154, 0.159);
+  padding: 5px 10px;
+  border-radius: 10px;
+}
+
+@media screen and (max-width: 550px) {
+  header {
+    align-items: center;
+    display: flex;
+    justify-content: space-between;
+    max-width: 1270px;
+    margin: 0 auto;
+    padding: 35px 30px 10px;
+  }
+  header .logo {
+    width: 160px;
+  }
+  header .logo img {
+    width: 100%;
+  }
+  header nav ul {
+    display: flex;
+    align-items: center;
+  }
+  header nav li a {
+    font-size: 0.9rem;
+    margin-left: 10px;
+  }
+  header nav li a.active {
+    background-color: rgba(255, 154, 154, 0.159);
+    padding: 3px 8px;
+    border-radius: 10px;
+  }
+}
+.footer {
+  width: 100%;
+  margin: 50px auto 0px;
+  padding: 50px 0 100px;
+  background-color: rgb(30, 30, 30);
+  color: white;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+}
+.footer img {
+  margin-top: 30px;
+  width: 100px;
+  margin-bottom: 15px;
+}
+.footer h1 {
+  font-size: 1.1rem;
+  margin-top: 30px;
+  font-weight: 500;
+  color: rgb(255, 105, 105);
+}
+
+@media screen and (max-width: 550px) {
+  .footer {
+    transform: translateY(0px);
+  }
+}
+.banner {
+  padding: 20px 20px;
+  max-width: 1240px;
+  margin: 0 auto;
+  position: relative;
+  display: flex;
+  justify-content: center;
+  text-align: center;
+}
+.banner .banner-image {
+  height: 220px;
+  width: 100%;
+  -o-object-fit: cover;
+     object-fit: cover;
+  border-radius: 25px;
+  position: relative;
+  z-index: 1;
+  filter: brightness(40%);
+}
+.banner .bannerText {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  color: #ffffff;
+  z-index: 3;
+}
+
+@media screen and (max-width: 550px) {
+  .banner .banner-image {
+    height: 150px;
+  }
+  .banner .bannerText {
+    font-size: 0.7rem;
+    left: 40%;
+    text-align: left;
+  }
+}
+.card-container {
+  background-color: rgba(173, 173, 173, 0.247);
+  border-radius: 20px;
+  max-width: 1210px;
+  margin: 10px auto;
+  padding: 40px;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); /* Utilisation de repeat(auto-fit, minmax()) pour une disposition flexible */
+  gap: 30px;
+}
+
+.card-logement {
+  height: 340px; /* Hauteur fixe de 340px */
+  width: 100%;
+  max-width: 100%; /* Utilisation d'une largeur relative */
+  transition: 0.2s;
+  position: relative;
+  border-radius: 10px;
+  overflow: hidden; /* Assurez-vous que le dégradé ne dépasse pas la carte */
+  /* Assombrir le bas de la card pour que le titre ressorte mieux */
+}
+.card-logement img {
+  -o-object-fit: cover;
+     object-fit: cover;
+  width: 100%;
+  height: 100%;
+  border-radius: 10px;
+}
+.card-logement .card-logement-text {
+  position: absolute;
+  color: white;
+  bottom: 15px;
+  left: 15px;
+  width: calc(100% - 30px); /* Utilisez la largeur de la carte moins la marge */
+  z-index: 1;
+}
+.card-logement:after {
+  content: "";
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  height: 50%; /* Hauteur de la partie assombrie */
+  background: linear-gradient(to top, rgba(0, 0, 0, 0.8), transparent);
+  border-radius: 10px;
+}
+.card-logement:hover {
+  transform: scale(1.04);
+}
+
+@media screen and (max-width: 550px) {
+  .card-container {
+    background-color: white;
+    max-width: 1210px;
+    margin: 5px auto;
+    padding: 0 25px;
+  }
+  .card-container .card-logement {
+    height: 240px; /* Hauteur fixe de 340px */
+  }
+  .card-container .card-logement .card-logement-text {
+    position: absolute;
+    color: white;
+    bottom: 15px;
+    left: 15px;
+    width: calc(100% - 110px); /* Utilisez la largeur de la carte moins la marge */
+    z-index: 1;
+  }
+}
+.collapse-item {
+  width: 53%;
+  max-width: 1240px;
+  margin: 35px auto;
+}
+.collapse-item .collapse-header {
+  align-items: center;
+  padding: 15px 10px;
+  border-radius: 5px;
+  display: flex;
+  justify-content: space-between;
+  background-color: rgb(250, 98, 98);
+}
+.collapse-item .collapse-header h3 {
+  color: white;
+}
+.collapse-item .collapse-header img {
+  width: 25px;
+  height: 15px;
+}
+.collapse-item .collapse-content {
+  padding: 0 10px;
+  line-height: 25px;
+  border-radius: 5px;
+  background-color: rgba(238, 238, 238, 0.547);
+  overflow: hidden;
+  transition: max-height 0.2s ease;
+}
+
+.errorStyle {
+  align-items: center;
+  text-align: center;
+}
+.errorStyle h1 {
+  font-size: 20rem;
+  color: rgb(255, 99, 99);
+  padding: 70px;
+}
+.errorStyle p {
+  font-size: 1.5rem;
+  color: rgb(255, 99, 99);
+  padding-bottom: 30px;
+}
+.errorStyle a {
+  color: inherit;
+  border-bottom: 1px solid black;
+}
+
+@media screen and (max-width: 550px) {
+  .errorStyle {
+    align-items: center;
+    text-align: center;
+  }
+  .errorStyle h1 {
+    font-size: 10rem;
+    color: rgb(255, 99, 99);
+    padding: 90px 0;
+  }
+  .errorStyle p {
+    font-size: 1.2rem;
+    padding: 30px;
+  }
+}
+.carousel {
+  position: relative;
+  width: 100%;
+  height: 415px;
+  border-radius: 15px;
+  overflow: hidden; /* Assurez-vous que les flèches ne débordent pas du carrousel */
+}
+.carousel .image-number {
+  position: absolute;
+  bottom: 10px;
+  right: 50%;
+  transform: translateX(50%);
+  background-color: rgba(39, 38, 38, 0.5);
+  color: white;
+  padding: 5px 10px;
+  border-radius: 5px;
+  font-size: 14px;
+}
+.carousel .carousel-image {
+  height: 100%;
+  width: 100%;
+  -o-object-fit: cover;
+     object-fit: cover;
+  transition: transform 0.5s ease; /* Ajoutez une transition pour l'animation */
+}
+.carousel .arrow {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  cursor: pointer;
+}
+.carousel .arrow img {
+  width: 20px;
+}
+.carousel .left-arrow {
+  left: 10px; /* Ajustez la position de la flèche gauche */
+}
+.carousel .right-arrow {
+  right: 10px; /* Ajustez la position de la flèche droite */
+}
+
+.slide-right {
+  transform: translateX(-1%); /* Déplacez l'image vers la droite */
+}
+
+.slide-left {
+  transform: translateX(1%); /* Déplacez l'image vers la gauche */
+}
+
+@media screen and (max-width: 550px) {
+  .carousel {
+    height: 315px;
+  }
+}
+.logement {
+  max-width: 1240px;
+  padding: 0px 20px;
+  margin: 0 auto;
+}
+.logement .cover-image {
+  -o-object-fit: cover;
+     object-fit: cover;
+  border-radius: 25px;
+  height: 415px;
+  width: 100%;
+}
+.logement .all-infos {
+  display: flex;
+  justify-content: space-between;
+}
+.logement .all-infos .first-case {
+  margin: 20px 0;
+}
+.logement .all-infos .first-case h2 {
+  color: rgb(255, 100, 100);
+  font-size: 1.7rem;
+  font-weight: 500;
+}
+.logement .all-infos .first-case p {
+  padding: 5px 0 20px;
+  font-weight: 600;
+}
+.logement .all-infos .first-case ul {
+  display: flex;
+}
+.logement .all-infos .first-case li {
+  font-size: 0.8rem;
+  color: white;
+  background-color: rgb(255, 100, 100);
+  padding: 5px 10px;
+  margin-right: 10px;
+  border-radius: 10px;
+}
+.logement .all-infos .second-case {
+  margin: 20px 0 0;
+  display: block;
+}
+.logement .all-infos .second-case .host p {
+  color: rgb(255, 100, 100);
+}
+.logement .all-infos .second-case .host .host-image {
+  border-radius: 300px;
+  width: 50px;
+}
+.logement .all-infos .second-case .host .headinfos {
+  display: flex;
+  align-items: center;
+}
+.logement .all-infos .second-case .rate {
+  margin-top: 20px;
+}
+.logement .all-infos .second-case img {
+  margin: 0 5px;
+}
+.logement .collapse {
+  display: grid;
+  grid-template-columns: 50% 50%;
+}
+.logement .collapse .description {
+  margin-right: 20px;
+}
+.logement .collapse-item {
+  width: 100%;
+}
+.logement .collapse-item .collapse-header {
+  align-items: center;
+  padding: 15px 10px;
+  border-radius: 5px;
+  display: flex;
+  justify-content: space-between;
+  background-color: rgb(250, 98, 98);
+}
+.logement .collapse-item .collapse-header h3 {
+  color: white;
+}
+.logement .collapse-item .collapse-header img {
+  width: 25px;
+  height: 15px;
+}
+.logement .collapse-item .collapse-content {
+  padding: 0 11px;
+  line-height: 25px;
+  border-radius: 5px;
+  background-color: rgba(238, 238, 238, 0.547);
+  overflow: hidden;
+  transition: max-height 0.2s ease;
+}
+
+@media screen and (max-width: 600px) {
+  .logement .all-infos {
+    display: block;
+  }
+  .logement .second-case ul {
+    display: flex;
+  }
+  .logement .second-case li {
+    font-size: 0.8rem;
+    color: white;
+    background-color: rgb(255, 100, 100);
+    padding: 6px 15px;
+  }
+  .logement .second-case .rate {
+    margin-top: 10px;
+  }
+  .logement .second-case .rate img {
+    margin: 0 5px;
+    width: 20px;
+  }
+  .logement .second-case .host {
+    display: flex;
+    flex-direction: row-reverse;
+    justify-content: space-between;
+  }
+  .logement .collapse {
+    display: block;
+  }
+  .logement .collapse .description {
+    margin-right: 0px;
+  }
+  .logement .collapse-item {
+    width: 100%;
+  }
+  .logement .collapse-item .collapse-header {
+    padding: 10px 10px;
+  }
+  .logement .collapse-item .collapse-header h3 {
+    color: white;
+    font-weight: 500;
+  }
+  .logement .collapse-item .collapse-content {
+    padding: 0 10px;
+    line-height: 25px;
+    border-radius: 5px;
+    background-color: rgba(238, 238, 238, 0.547);
+    overflow: hidden;
+    transition: max-height 0.2s ease;
+  }
+}
+.full-page .collapse-item {
+  width: 90%;
+  max-width: 1040px;
+  margin: 35px auto;
+}
+.full-page .collapse-item .collapse-header {
+  align-items: center;
+  padding: 10px 10px;
+  border-radius: 5px;
+  display: flex;
+  justify-content: space-between;
+  background-color: rgb(250, 98, 98);
+}
+.full-page .collapse-item .collapse-header h3 {
+  color: white;
+}
+.full-page .collapse-item .collapse-header img {
+  width: 25px;
+  height: 15px;
+}
+.full-page .collapse-item .collapse-content {
+  padding: 0 10px;
+  line-height: 25px;
+  border-radius: 5px;
+  background-color: rgba(238, 238, 238, 0.547);
+  overflow: hidden;
+  transition: max-height 0.2s ease;
+}
+
+@media screen and (max-width: 600px) {
+  .collapse-item {
+    width: 100%;
+    max-width: 1240px;
+    margin: 35px auto;
+  }
+  .collapse-item .collapse-header {
+    align-items: center;
+    padding: 15px 10px;
+    border-radius: 5px;
+    display: flex;
+    justify-content: space-between;
+    background-color: rgb(250, 98, 98);
+  }
+  .collapse-item .collapse-header h3 {
+    color: white;
+  }
+  .collapse-item .collapse-header img {
+    width: 25px;
+    height: 15px;
+  }
+  .collapse-item .collapse-content {
+    padding: 0 10px;
+    line-height: 25px;
+    border-radius: 5px;
+    background-color: rgba(238, 238, 238, 0.547);
+    overflow: hidden;
+    transition: max-height 0.2s ease;
+  }
+}
+body {
+  min-height: 100svh;
+  min-height: 100dvh;
+  min-height: 100vh;
+}/*# sourceMappingURL=index.css.map */
